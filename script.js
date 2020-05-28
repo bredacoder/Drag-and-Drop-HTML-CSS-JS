@@ -15,7 +15,10 @@ cards.forEach(card => {
 })
 
 function dragstart() {
-    // log('CARD: Start draggin')
+    dropzones.forEach( dropzone => dropzone.classList.add('highlight'))
+    
+    // this = card
+    this.classList.add('is-dragging')
 }
 
 function drag() {
@@ -23,7 +26,10 @@ function drag() {
 }
 
 function dragend() {
-    // log('CARD:Stop drag')
+    dropzones.forEach( dropzone => dropzone.classList.remove('highlight'))
+    
+    // this = card
+    this.classList.remove('is-dragging')
 }
 
 /* place where we weill drop cards */
@@ -39,11 +45,19 @@ function dragenter() {
 }
 
 function dragover() {
-    log('DROPZONE: Over')
+    this.classList.add('over')
+
+    // get dragging card
+    const cardBeingDragged = document.querySelector('.is-dragging')
+
+    // this = dropzone
+    this.appendChild(cardBeingDragged)
+
 }
 
 function dragleave() {
-    log('DROPZONE: Leave')
+    // this = dropzone
+    this.classList.remove('over')
 }
 
 function drop() {

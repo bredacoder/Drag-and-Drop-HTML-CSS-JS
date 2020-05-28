@@ -15,15 +15,15 @@ cards.forEach(card => {
 })
 
 function dragstart() {
-    log('CARD: Start draggin')
+    // log('CARD: Start draggin')
 }
 
 function drag() {
-    log('CARD: Is dragging')
+    // log('CARD: Is dragging')
 }
 
 function dragend() {
-    log('CARD:Stop drag')
+    // log('CARD:Stop drag')
 }
 
 /* place where we weill drop cards */

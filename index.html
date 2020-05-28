@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <title>Simple Kanban Board</title>
 </head>
 <body>
@@ -11,11 +13,31 @@
     -->
     <div class="boards">
         <div class="board">
-            <h3></h3>
+            <h3>Todo</h3>
             <div class="dropzone">
-                <div class="card">
-                    <div class="status"></div>
-                    <div class="content"></div>
+                <div class="card" draggable="true">
+                    <div class="status green"></div>
+                    <div class="content">Do videos!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <h3>In progress</h3>
+            <div class="dropzone">
+                <div class="card" draggable="true">
+                    <div class="status blue"></div>
+                    <div class="content">Fórum</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <h3>Done</h3>
+            <div class="dropzone">
+                <div class="card" draggable="true">
+                    <div class="status red"></div>
+                    <div class="content">Next Level Week</div>
                 </div>
             </div>
         </div>
